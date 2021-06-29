@@ -32,7 +32,7 @@ const Products = ({ products }) => {
 
  const deleteProduct2 = useCallback((id2) =>{  
    console.log(id2)
-  axios.delete('http://localhost:8080/api/products',  {"id":id2} ,{crossdomain: true,
+  axios.post('http://18.223.151.35:8083/api/products/delete',  {"id":id2} ,{crossdomain: true,
   mode:"cors", headers}
     
   ).then((response) => {  
@@ -112,7 +112,7 @@ info[key].identification = (
       };
       
       axios({      
-        url: 'http://localhost:8080/api/products',      
+        url: 'http://18.223.151.35:8083/api/products',      
         method: 'get',
         crossdomain: true,
         mode:"cors",

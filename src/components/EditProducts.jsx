@@ -31,7 +31,7 @@ const EditProducts = ({ products }) => {
 
   useEffect(() => { 
 
-    axios.post('http://localhost:8080/api/products/product',  {id} ,{crossdomain: true,
+    axios.post('http://18.223.151.35:8083/api/products/product',  {id} ,{crossdomain: true,
     mode:"cors", headers}
       
     ).then((response) => {  
@@ -69,7 +69,7 @@ const EditProducts = ({ products }) => {
     
 
     
-    axios.put('http://localhost:8080/api/products',  object ,{crossdomain: true,
+    axios.put('http://18.223.151.35:8083/api/products',  object ,{crossdomain: true,
     mode:"cors", headers}
       
     ).then((response) => {  

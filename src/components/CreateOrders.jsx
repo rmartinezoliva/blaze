@@ -16,7 +16,7 @@ const CreateOrders = ({ products }) => {
 
   const [consumer, setConsumer] = useState("");
   const [status, setStatus] = useState("Pending");
-  const [date, setDate] = useState("2021-30-06");
+  const [date, setDate] = useState("2021-29-06");
   const [total, setTotal] = useState("0");
 
 
@@ -39,7 +39,7 @@ const CreateOrders = ({ products }) => {
     
 
     
-    axios.post('http://localhost:8080/api/orders',  object ,{crossdomain: true,
+    axios.post('http://18.223.151.35:8083/api/orders',  object ,{crossdomain: true,
     mode:"cors", headers}
       
     ).then((response) => {  

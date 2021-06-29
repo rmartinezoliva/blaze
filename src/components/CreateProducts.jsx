@@ -39,7 +39,7 @@ const CreateProducts = ({ products }) => {
     
 
     
-    axios.post('http://localhost:8080/api/products',  object ,{crossdomain: true,
+    axios.post('http://18.223.151.35:8083/api/products',  object ,{crossdomain: true,
     mode:"cors", headers}
       
     ).then((response) => {  

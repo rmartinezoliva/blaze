@@ -30,13 +30,13 @@ const Orders = ({ products }) => {
 
  const deleteProduct2 = useCallback((id2) =>{  
    console.log(id2)
-  axios.delete('http://localhost:8080/api/orders/delete',  {id:id2} ,{crossdomain: true,
+  axios.post('http://18.223.151.35:8083/api/orders/delete',  {id:id2} ,{crossdomain: true,
   mode:"cors", headers}
     
-  ).then((response) => {  
-  
-    // setProductName(response.data.name)
+  ).then((response) => {   
+    
     setShow(false)
+    window.location.reload();
    
   })
   .catch((error) => {      
@@ -63,7 +63,7 @@ const Orders = ({ products }) => {
       info[key].action = (
         <div> 
           <>
-            <Button href={`/edit-order/${info[key].id}`} variant="outline-warning">EDIT</Button>           
+            <Button href={`/edit-order/${info[key].id}/${index+1}`} variant="outline-warning">EDIT</Button>           
           </>
           <>
             <Button variant="outline-danger" onClick={()=>deleteProduct(info[key].id,info[key].name)}>DELETE</Button>            
@@ -99,7 +99,7 @@ info[key].identification = (
   
       
       axios({      
-        url: 'http://localhost:8080/api/orders',      
+        url: 'http://18.223.151.35:8083/api/orders',      
         method: 'get',
         crossdomain: true,
         mode:"cors",

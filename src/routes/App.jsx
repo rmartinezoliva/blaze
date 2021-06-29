@@ -27,7 +27,7 @@ const App = () => {
             <Route exact path="/create-product" component={CreateProducts} />  
             <Route exact path="/create-order" component={CreateOrder} /> 
             <Route exact path="/edit-product/:id" component={EditProduct} />
-            <Route exact path="/edit-order/:id" component={EditProduct} />   
+            <Route exact path="/edit-order/:id/:numero" component={EditOrder} />   
             <Route exact path="/orders" component={Home} />       
             <Route component={NotFound} />
           </Switch>
